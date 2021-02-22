@@ -1,2 +1,4 @@
 # chat-desktop-app
-вёрстка
+* вёрстка
+------
+deploy https://elenanam.github.io/chat-desktop-app/
