@@ -1,3 +1,3 @@
 # chat-desktop-app
-without adaptive
-PerfectPixel
+* without adaptive
+* PerfectPixel
