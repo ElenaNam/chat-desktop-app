@@ -8,6 +8,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
 
 body {
     font-family: 'Lato', sans-serif;
@@ -19,45 +25,34 @@ body {
     margin: 0 auto;
     padding: 0 calc(25% - 700px); 
     max-width: 1400px;   
-    /* height: 800px;  */   
+    height: 800px;  
     width: 100%;
     display: grid;
     /* grid-template-columns: 70px 260px 870px 200px; */
-    grid-template-columns: 5% calc(18% + 8px) auto calc(14% + 4px); 
-    background-color: rgb(236, 139, 139);
+    grid-template-columns: 5% 266px auto calc(14% + 4px);     
     /* grid-column-gap: 1px; */
     
 }
 .item {
     width: 100%;
-    display: grid;    
-    background-color: rgb(139, 236, 195);
+    display: grid;        
 }
-.nav-1 {
-    height: 100vh;
+
+/* first block */
+
+.nav-1 {    
     position: relative;
     align-content: flex-start;
     justify-content: center;
     background-color: $font-bg-1;
+    filter: opacity(80%);
     & a {
-/*         margin: 0 auto;
-        padding: 10px 15px; */
         max-width: 70px;
         max-height: 60px;
-        & img {    
-/*             margin: 0 auto;    
-            width: 40px;
-            height: 40px;
-            object-fit: none;
-            object-position: center center; */
-        }
-
     }
-
-
 }
 .dots {
-    margin: 10px auto;
+    margin: 10px auto 5px;
     width: 50px;
 
 }
@@ -72,11 +67,125 @@ body {
     height: 41px;
     box-shadow: -2px 0px 16px rgba(0, 0, 0, 0.16);
     background: rgba(255, 255, 255, .1);
-    mix-blend-mode: normal;
-    
+    mix-blend-mode: normal;    
     border-radius: 50%;
     background-image: url('../assets/images/plus.svg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: auto;
 }
+
+ /* second block */
+
+.nav-2 {    
+    padding-top: 30px;
+    grid-template-columns: 260px; 
+    grid-template-rows: 50px 50px 360px 315px; /* убрать фикс.высоту*/
+    background-color: $font-bg-2;
+    filter: opacity(80%);
+    overflow-y: scroll;
+    overflow-x: hidden; 
+    
+}
+.sub-item-2-title {    
+    padding: 5px 11px 0 26px;  
+    position: relative;    
+
+    & h1 {
+        
+        display: inline-block;
+        color: $font-light;
+        @include title-text();
+    }
+    .arrow-img {
+        margin-left: 5px; 
+        vertical-align: text-top;
+        
+    }
+    .settings-img {
+        position: absolute;
+        top: 10px;
+        right: 18px;        
+    }
+}
+.sub-item-2-subtitle {    
+    padding: 9px 26px;
+
+    & img {
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+    & span {
+        vertical-align: middle;
+        color: $font-middle;
+        @include text-1();
+    }
+}
+
+.sub-item-2-block-1 {    
+    padding: 8px 18px 0 26px;
+    & ul { 
+        padding-top: 15px;    
+    }
+    & ul li {
+        padding: 3px 0 7px 11px;
+        border: 1px solid transparent;
+        border-radius: 5px;
+    }
+    .active-channel {
+        background-color: rgba(251, 227, 227, 0.2);
+    }
+    .active-channel a {        
+        color: $font-light;
+    }
+    & ul li a {
+        color: $font-middle;
+        @include text-1();
+    }
+}
+.block-title {
+    display: flex;
+    justify-content: space-between;
+    @include h2-text();
+    color: $font-dark;
+    & h2 {
+        display: inline-block;
+        height: fit-content;     
+        @include h2-text();
+    }
+}
+
+.sub-item-2-block-2 {
+    padding: 8px 18px 0 26px;
+
+    & ul {
+        padding-top: 15px;
+    }
+    & ul li {
+        padding: 5px 0;
+    }
+    & ul li a {
+        display: flex;
+        align-items: center;
+        color: $font-middle;
+        @include text-1();
+    }
+    & ul li span {
+        margin-left: 12px;
+        color: $font-middle;
+        @include text-1();
+    }
+    .circle {
+        margin-right: 5px;
+        display: inline-block;        
+        background-color: $font-bg-3;
+        border-radius: 50%;
+        width: 8px;
+        height: 8px; 
+    }
+    .circle-active {
+        background-color: $font-circle;
+    }
+}
+/* third block */
+/* fourth block */

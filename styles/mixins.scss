@@ -1,0 +1,26 @@
+@mixin title-text {
+    font-family: 'Lato';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0px;    
+}
+@mixin text-1 {
+    font-family: 'Lato';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0px;     
+}
+@mixin h2-text {
+    font-family: 'Lato';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 0px;       
+}
+
+
